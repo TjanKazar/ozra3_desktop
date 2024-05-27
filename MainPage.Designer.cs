@@ -40,6 +40,8 @@
 			fileSystemWatcher1 = new FileSystemWatcher();
 			tekmovanje_porocilo = new Button();
 			tekmovalec_porocilo = new Button();
+			label4 = new Label();
+			button7 = new Button();
 			((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
 			SuspendLayout();
 			// 
@@ -66,6 +68,7 @@
 			button1.TabIndex = 1;
 			button1.Text = "Post New";
 			button1.UseVisualStyleBackColor = false;
+			button1.Click += button1_Click;
 			// 
 			// button2
 			// 
@@ -79,6 +82,7 @@
 			button2.TabIndex = 2;
 			button2.Text = "Change Exsisting";
 			button2.UseVisualStyleBackColor = false;
+			button2.Click += button2_Click;
 			// 
 			// button3
 			// 
@@ -143,13 +147,14 @@
 			button6.TabIndex = 5;
 			button6.Text = "Post New";
 			button6.UseVisualStyleBackColor = false;
+			button6.Click += button6_Click_1;
 			// 
 			// label3
 			// 
 			label3.AutoSize = true;
 			label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
 			label3.ForeColor = Color.Black;
-			label3.Location = new Point(96, 75);
+			label3.Location = new Point(96, 156);
 			label3.Name = "label3";
 			label3.Size = new Size(77, 21);
 			label3.TabIndex = 8;
@@ -165,7 +170,7 @@
 			tekmovanje_porocilo.BackColor = Color.MediumPurple;
 			tekmovanje_porocilo.Font = new Font("Nirmala UI", 10F);
 			tekmovanje_porocilo.ForeColor = SystemColors.ButtonHighlight;
-			tekmovanje_porocilo.Location = new Point(252, 56);
+			tekmovanje_porocilo.Location = new Point(252, 137);
 			tekmovanje_porocilo.Name = "tekmovanje_porocilo";
 			tekmovanje_porocilo.Size = new Size(135, 61);
 			tekmovanje_porocilo.TabIndex = 10;
@@ -177,18 +182,39 @@
 			tekmovalec_porocilo.BackColor = Color.Salmon;
 			tekmovalec_porocilo.Font = new Font("Nirmala UI", 10F);
 			tekmovalec_porocilo.ForeColor = SystemColors.ButtonHighlight;
-			tekmovalec_porocilo.Location = new Point(453, 56);
+			tekmovalec_porocilo.Location = new Point(453, 137);
 			tekmovalec_porocilo.Name = "tekmovalec_porocilo";
 			tekmovalec_porocilo.Size = new Size(135, 61);
 			tekmovalec_porocilo.TabIndex = 11;
 			tekmovalec_porocilo.Text = "Tekmovalec";
 			tekmovalec_porocilo.UseVisualStyleBackColor = false;
 			// 
+			// label4
+			// 
+			label4.AutoSize = true;
+			label4.Location = new Point(-8, 32);
+			label4.Name = "label4";
+			label4.Size = new Size(797, 15);
+			label4.TabIndex = 12;
+			label4.Text = "______________________________________________________________________________________________________________________________________________________________";
+			// 
+			// button7
+			// 
+			button7.Location = new Point(12, 12);
+			button7.Name = "button7";
+			button7.Size = new Size(171, 23);
+			button7.TabIndex = 13;
+			button7.Text = "pregled vseh tekmovanj:";
+			button7.UseVisualStyleBackColor = true;
+			button7.Click += button7_Click;
+			// 
 			// MainPage
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(769, 521);
+			Controls.Add(button7);
+			Controls.Add(label4);
 			Controls.Add(tekmovalec_porocilo);
 			Controls.Add(tekmovanje_porocilo);
 			Controls.Add(label3);
@@ -221,5 +247,7 @@
 		private FileSystemWatcher fileSystemWatcher1;
 		private Button tekmovanje_porocilo;
 		private Button tekmovalec_porocilo;
+		private Button button7;
+		private Label label4;
 	}
 }
