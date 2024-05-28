@@ -2,14 +2,14 @@
 
 namespace ozra3_desktop
 {
-	public partial class Form3 : Form
+	public partial class FindTekmovanjePUTForm : Form
 	{
 		public HttpClient client;
 		public string competition_name;
 		public string year;
 		public string results;
 
-		public Form3(HttpClient client)
+		public FindTekmovanjePUTForm(HttpClient client)
 		{
 			this.client = client;
 			InitializeComponent();

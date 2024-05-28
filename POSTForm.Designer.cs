@@ -1,6 +1,6 @@
 ﻿namespace ozra3_desktop
 {
-	partial class Form5
+	partial class POSTForm
 	{
 		/// <summary>
 		/// Required designer variable.

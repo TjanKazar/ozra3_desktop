@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace ozra3_desktop
 {
-	public partial class Form4 : Form
+	public partial class FindTekmovanjePOSTForm : Form
 	{
 		private HttpClient client;
 		private Tekmovanje tekma;
@@ -15,11 +15,10 @@ namespace ozra3_desktop
 		public string competition_name;
 		public string year;
 
-		public Form4(HttpClient client)
+		public FindTekmovanjePOSTForm(HttpClient client)
 		{
 			this.client = client;
 			InitializeComponent();
-			client.BaseAddress = new Uri("http://127.0.0.1:5000");
 		}
 
 		private void textBox1_TextChanged(object sender, EventArgs e)
@@ -38,7 +37,7 @@ namespace ozra3_desktop
 
 			if (tekma != null)
 			{
-				Form display = new Form5(client, tekma);
+				Form display = new POSTForm(client, tekma);
 				display.Show();
 			}
 			else

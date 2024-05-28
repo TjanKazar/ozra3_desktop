@@ -1,6 +1,6 @@
 ﻿namespace ozra3_desktop
 {
-	partial class Form2
+	partial class DisplayTekmovanjaForm
 	{
 		/// <summary>
 		/// Required designer variable.

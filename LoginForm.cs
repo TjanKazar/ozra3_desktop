@@ -5,11 +5,11 @@ using System.Windows.Forms;
 
 namespace ozra3_desktop
 {
-	public partial class Form1 : Form
+	public partial class LoginForm : Form
 	{
 		private HttpClient client = new HttpClient();
 
-		public Form1()
+		public LoginForm()
 		{
 			InitializeComponent();
 			client.BaseAddress = new Uri("http://127.0.0.1:5000");

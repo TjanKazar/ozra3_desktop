@@ -6,12 +6,12 @@ using System.Windows.Forms;
 
 namespace ozra3_desktop
 {
-	public partial class Form5 : Form
+	public partial class POSTForm : Form
 	{
 		private HttpClient client;
 		private Tekmovanje tekma;
 
-		public Form5(HttpClient client, Tekmovanje tekma)
+		public POSTForm(HttpClient client, Tekmovanje tekma)
 		{
 			InitializeComponent();
 			this.client = client;
