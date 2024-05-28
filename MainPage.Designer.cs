@@ -28,6 +28,7 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
 			label1 = new Label();
 			button1 = new Button();
 			button2 = new Button();
@@ -36,13 +37,14 @@
 			button4 = new Button();
 			button5 = new Button();
 			button6 = new Button();
-			label3 = new Label();
 			fileSystemWatcher1 = new FileSystemWatcher();
-			tekmovanje_porocilo = new Button();
-			tekmovalec_porocilo = new Button();
 			label4 = new Label();
 			button7 = new Button();
+			pictureBox3 = new PictureBox();
+			pictureBox1 = new PictureBox();
 			((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
+			((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
 			// 
 			// label1
@@ -152,45 +154,10 @@
 			button6.UseVisualStyleBackColor = false;
 			button6.Click += button6_Click_1;
 			// 
-			// label3
-			// 
-			label3.AutoSize = true;
-			label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
-			label3.ForeColor = Color.Black;
-			label3.Location = new Point(96, 156);
-			label3.Name = "label3";
-			label3.Size = new Size(77, 21);
-			label3.TabIndex = 8;
-			label3.Text = "Poročila:";
-			// 
 			// fileSystemWatcher1
 			// 
 			fileSystemWatcher1.EnableRaisingEvents = true;
 			fileSystemWatcher1.SynchronizingObject = this;
-			// 
-			// tekmovanje_porocilo
-			// 
-			tekmovanje_porocilo.BackColor = Color.MediumPurple;
-			tekmovanje_porocilo.Font = new Font("Nirmala UI", 10F);
-			tekmovanje_porocilo.ForeColor = SystemColors.ButtonHighlight;
-			tekmovanje_porocilo.Location = new Point(252, 137);
-			tekmovanje_porocilo.Name = "tekmovanje_porocilo";
-			tekmovanje_porocilo.Size = new Size(135, 61);
-			tekmovanje_porocilo.TabIndex = 10;
-			tekmovanje_porocilo.Text = "Tekmovanje";
-			tekmovanje_porocilo.UseVisualStyleBackColor = false;
-			// 
-			// tekmovalec_porocilo
-			// 
-			tekmovalec_porocilo.BackColor = Color.Salmon;
-			tekmovalec_porocilo.Font = new Font("Nirmala UI", 10F);
-			tekmovalec_porocilo.ForeColor = SystemColors.ButtonHighlight;
-			tekmovalec_porocilo.Location = new Point(453, 137);
-			tekmovalec_porocilo.Name = "tekmovalec_porocilo";
-			tekmovalec_porocilo.Size = new Size(135, 61);
-			tekmovalec_porocilo.TabIndex = 11;
-			tekmovalec_porocilo.Text = "Tekmovalec";
-			tekmovalec_porocilo.UseVisualStyleBackColor = false;
 			// 
 			// label4
 			// 
@@ -211,16 +178,34 @@
 			button7.UseVisualStyleBackColor = true;
 			button7.Click += button7_Click;
 			// 
+			// pictureBox3
+			// 
+			pictureBox3.Image = Properties.Resources.smallsloflag;
+			pictureBox3.Location = new Point(648, 4);
+			pictureBox3.Name = "pictureBox3";
+			pictureBox3.Size = new Size(46, 25);
+			pictureBox3.TabIndex = 17;
+			pictureBox3.TabStop = false;
+			pictureBox3.Click += pictureBox3_Click;
+			// 
+			// pictureBox1
+			// 
+			pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+			pictureBox1.Location = new Point(700, 4);
+			pictureBox1.Name = "pictureBox1";
+			pictureBox1.Size = new Size(39, 25);
+			pictureBox1.TabIndex = 18;
+			pictureBox1.TabStop = false;
+			// 
 			// MainPage
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(769, 521);
+			Controls.Add(pictureBox1);
+			Controls.Add(pictureBox3);
 			Controls.Add(button7);
 			Controls.Add(label4);
-			Controls.Add(tekmovalec_porocilo);
-			Controls.Add(tekmovanje_porocilo);
-			Controls.Add(label3);
 			Controls.Add(button4);
 			Controls.Add(button5);
 			Controls.Add(button6);
@@ -232,6 +217,8 @@
 			Name = "MainPage";
 			Text = "MainPage";
 			((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
+			((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -246,11 +233,10 @@
 		private Button button4;
 		private Button button5;
 		private Button button6;
-		private Label label3;
 		private FileSystemWatcher fileSystemWatcher1;
-		private Button tekmovanje_porocilo;
-		private Button tekmovalec_porocilo;
 		private Button button7;
 		private Label label4;
+		private PictureBox pictureBox1;
+		private PictureBox pictureBox3;
 	}
 }

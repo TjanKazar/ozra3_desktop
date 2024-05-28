@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using rskibbe.I18n.Models;
+using rskibbe.I18n.Json;
+using rskibbe.I18n.Winforms;
+
 
 namespace ozra3_desktop
 {
@@ -17,6 +11,8 @@ namespace ozra3_desktop
 		public MainPage(HttpClient client)
 		{
 			this.client = client;
+			
+
 			InitializeComponent();
 		}
 
@@ -76,6 +72,11 @@ namespace ozra3_desktop
 		{
 			Form DeleteForm = new DeleteRezultat(client);
 			DeleteForm.Show();
+		}
+
+		private void pictureBox3_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }
