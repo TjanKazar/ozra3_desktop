@@ -1,5 +1,4 @@
 ﻿using rskibbe.I18n.Models;
-using rskibbe.I18n.Json;
 using rskibbe.I18n.Winforms;
 
 
@@ -10,12 +9,14 @@ namespace ozra3_desktop
 		HttpClient client;
 		public MainPage(HttpClient client)
 		{
+			Translator.Builder
+	.WithAutoFormTranslation()
+	.Build()
+	.StoreInstance();
 			this.client = client;
-			
 
 			InitializeComponent();
 		}
-
 
 		private void button6_Click(object sender, EventArgs e)
 		{
@@ -73,10 +74,19 @@ namespace ozra3_desktop
 			Form DeleteForm = new DeleteRezultat(client);
 			DeleteForm.Show();
 		}
-
-		private void pictureBox3_Click(object sender, EventArgs e)
+		private async void button8_Click(object sender, EventArgs e)
 		{
 
 		}
+
+		private async void button9_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		
 	}
+
+
 }
+

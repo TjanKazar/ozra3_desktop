@@ -20,6 +20,7 @@ namespace ozra3_desktop
 		public DeleteRezultat(HttpClient client)
 		{
 			this.client = client;
+			
 			InitializeComponent();
 		}
 

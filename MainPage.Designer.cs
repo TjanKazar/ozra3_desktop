@@ -28,7 +28,6 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
 			label1 = new Label();
 			button1 = new Button();
 			button2 = new Button();
@@ -40,11 +39,9 @@
 			fileSystemWatcher1 = new FileSystemWatcher();
 			label4 = new Label();
 			button7 = new Button();
-			pictureBox3 = new PictureBox();
-			pictureBox1 = new PictureBox();
+			button8 = new Button();
+			button9 = new Button();
 			((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).BeginInit();
-			((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-			((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
 			SuspendLayout();
 			// 
 			// label1
@@ -54,9 +51,10 @@
 			label1.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
 			label1.Location = new Point(54, 365);
 			label1.Name = "label1";
-			label1.Size = new Size(91, 19);
+			label1.Size = new Size(98, 19);
 			label1.TabIndex = 0;
-			label1.Text = "Tekmovanja";
+			label1.Tag = "i18n:key6";
+			label1.Text = "Competitions";
 			// 
 			// button1
 			// 
@@ -68,7 +66,8 @@
 			button1.Name = "button1";
 			button1.Size = new Size(113, 44);
 			button1.TabIndex = 1;
-			button1.Text = "Post New";
+			button1.Tag = "i18n:key2";
+			button1.Text = "Post new";
 			button1.UseVisualStyleBackColor = false;
 			button1.Click += button1_Click;
 			// 
@@ -82,7 +81,8 @@
 			button2.Name = "button2";
 			button2.Size = new Size(160, 44);
 			button2.TabIndex = 2;
-			button2.Text = "Change Exsisting";
+			button2.Tag = "i18n:key3";
+			button2.Text = "Change exsisting";
 			button2.UseVisualStyleBackColor = false;
 			button2.Click += button2_Click;
 			// 
@@ -96,7 +96,8 @@
 			button3.Name = "button3";
 			button3.Size = new Size(155, 44);
 			button3.TabIndex = 3;
-			button3.Text = "Delete Exsisting";
+			button3.Tag = "i18n:key4";
+			button3.Text = "Delete exsisting";
 			button3.UseVisualStyleBackColor = false;
 			button3.Click += button3_Click;
 			// 
@@ -107,9 +108,10 @@
 			label2.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 238);
 			label2.Location = new Point(54, 443);
 			label2.Name = "label2";
-			label2.Size = new Size(62, 19);
+			label2.Size = new Size(57, 19);
 			label2.TabIndex = 4;
-			label2.Text = "Rezulati";
+			label2.Tag = "i18n:key7";
+			label2.Text = "Results";
 			label2.Click += label2_Click;
 			// 
 			// button4
@@ -122,7 +124,8 @@
 			button4.Name = "button4";
 			button4.Size = new Size(155, 44);
 			button4.TabIndex = 7;
-			button4.Text = "Delete Exsisting";
+			button4.Tag = "i18n:key4";
+			button4.Text = "Delete exsisting";
 			button4.UseVisualStyleBackColor = false;
 			button4.Click += button4_Click;
 			// 
@@ -136,7 +139,8 @@
 			button5.Name = "button5";
 			button5.Size = new Size(160, 44);
 			button5.TabIndex = 6;
-			button5.Text = "Change Exsisting";
+			button5.Tag = "i18n:key3";
+			button5.Text = "Change exsisting";
 			button5.UseVisualStyleBackColor = false;
 			button5.Click += button5_Click;
 			// 
@@ -150,7 +154,8 @@
 			button6.Name = "button6";
 			button6.Size = new Size(113, 44);
 			button6.TabIndex = 5;
-			button6.Text = "Post New";
+			button6.Tag = "i18n:key2";
+			button6.Text = "Post new";
 			button6.UseVisualStyleBackColor = false;
 			button6.Click += button6_Click_1;
 			// 
@@ -174,36 +179,38 @@
 			button7.Name = "button7";
 			button7.Size = new Size(171, 23);
 			button7.TabIndex = 13;
-			button7.Text = "pregled vseh tekmovanj:";
+			button7.Tag = "i18n:key5";
+			button7.Text = "view all competitions:";
 			button7.UseVisualStyleBackColor = true;
 			button7.Click += button7_Click;
 			// 
-			// pictureBox3
+			// button8
 			// 
-			pictureBox3.Image = Properties.Resources.smallsloflag;
-			pictureBox3.Location = new Point(648, 4);
-			pictureBox3.Name = "pictureBox3";
-			pictureBox3.Size = new Size(46, 25);
-			pictureBox3.TabIndex = 17;
-			pictureBox3.TabStop = false;
-			pictureBox3.Click += pictureBox3_Click;
+			button8.Location = new Point(580, 6);
+			button8.Name = "button8";
+			button8.Size = new Size(75, 35);
+			button8.TabIndex = 19;
+			button8.Text = "SLO";
+			button8.UseVisualStyleBackColor = true;
+			button8.Click += button8_Click;
 			// 
-			// pictureBox1
+			// button9
 			// 
-			pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-			pictureBox1.Location = new Point(700, 4);
-			pictureBox1.Name = "pictureBox1";
-			pictureBox1.Size = new Size(39, 25);
-			pictureBox1.TabIndex = 18;
-			pictureBox1.TabStop = false;
+			button9.Location = new Point(671, 6);
+			button9.Name = "button9";
+			button9.Size = new Size(75, 35);
+			button9.TabIndex = 20;
+			button9.Text = "ENG";
+			button9.UseVisualStyleBackColor = true;
+			button9.Click += button9_Click;
 			// 
 			// MainPage
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(769, 521);
-			Controls.Add(pictureBox1);
-			Controls.Add(pictureBox3);
+			Controls.Add(button9);
+			Controls.Add(button8);
 			Controls.Add(button7);
 			Controls.Add(label4);
 			Controls.Add(button4);
@@ -217,8 +224,6 @@
 			Name = "MainPage";
 			Text = "MainPage";
 			((System.ComponentModel.ISupportInitialize)fileSystemWatcher1).EndInit();
-			((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-			((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
 			ResumeLayout(false);
 			PerformLayout();
 		}
@@ -236,7 +241,7 @@
 		private FileSystemWatcher fileSystemWatcher1;
 		private Button button7;
 		private Label label4;
-		private PictureBox pictureBox1;
-		private PictureBox pictureBox3;
+		private Button button9;
+		private Button button8;
 	}
 }
